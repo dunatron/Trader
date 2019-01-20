@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 const SickButton = styled.button`
-  background: red;
-  color: white;
+  background: ${props => props.theme.palette.primary.main};
+  color: ${props => props.theme.palette.primary.contrastText};
   font-weight: 500;
   border: 0;
   border-radius: 0;
@@ -15,6 +15,6 @@ const SickButton = styled.button`
   &[disabled] {
     opacity: 0.5;
   }
-`;
+`
 
-export default SickButton;
+export default SickButton

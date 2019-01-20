@@ -1,16 +1,34 @@
 import React, { Component } from "react"
-import Header from "../components/Header"
-import Meta from "../components/Meta"
 import styled, { ThemeProvider, injectGlobal } from "styled-components"
+import Header from "./Header"
+import Meta from "./Meta"
 
 const theme = {
   red: "#FF0000",
   black: "#393939",
-  grey: "#3a3a3a",
+  grey: "#3A3A3A",
   lightgrey: "#E1E1E1",
-  offWhite: "EDEDED",
+  offWhite: "#EDEDED",
   maxWidth: "1000px",
-  bs: "0 12px 24px 0 rgba(0,0,0,0.09)",
+  bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)",
+  // palette: {
+  //   primary: {
+  //     main: "#3f51b5",
+  //     contrastText: "#FFF",
+  //   },
+  //   secondary: {
+  //     main: "#e00082",
+  //   },
+  // },
+  palette: {
+    primary: {
+      main: "#e00082",
+      contrastText: "#FFF",
+    },
+    secondary: {
+      main: "#3f51b5",
+    },
+  },
 }
 
 const StyledPage = styled.div`
@@ -20,7 +38,6 @@ const StyledPage = styled.div`
 
 const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
-  background: ${props => props.theme.red};
   margin: 0 auto;
   padding: 2rem;
 `

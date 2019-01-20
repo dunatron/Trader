@@ -1,6 +1,9 @@
+import Items from '../components/Items';
+
 const Home = props => (
   <div>
-    <p>HOME PAGER!</p>
+    <Items page={parseFloat(props.query.page) || 1} />
   </div>
-)
-export default Home
+);
+
+export default Home;
