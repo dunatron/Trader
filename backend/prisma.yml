@@ -1,0 +1,8 @@
+#endpoint: ${env:PRISMA_ENDPOINT}
+endpoint: https://us1.prisma.sh/heath-dunlop-37e897/ld-trader/dev
+datamodel: datamodel.graphql
+# secret: ${env:PRISMA_SECRET}
+secret: omgplzdonttellanyone
+hooks:
+  post-deploy:
+    - graphql get-schema -p prisma
