@@ -926,6 +926,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
 /* harmony import */ var _Meta__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Meta */ "./components/Meta.js");
+/* harmony import */ var _material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/NoSsr */ "@material-ui/core/NoSsr");
+/* harmony import */ var _material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _material_ui_core_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/styles/colorManipulator */ "@material-ui/core/styles/colorManipulator");
+/* harmony import */ var _material_ui_core_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../theme */ "./theme.js");
 var _jsxFileName = "/Users/Tron/Boxes/home/graph-shop/frontend/components/Page.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -947,7 +954,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  @font-face {\n    font-family: 'radnika_next';\n    src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');\n    font-weight: normal;\n    font-style: normal;\n  }\n  html {\n    box-sizing: border-box;\n    font-size: 10px;\n  }\n  *, *:before, *:after {\n    box-sizing: inherit;\n  }\n  body {\n    padding: 0;\n    margin: 0;\n    font-size: 1.5rem;\n    line-height: 2;\n    font-family: 'radnika_next';\n  }\n  a {\n    text-decoration: none;\n    color: ", ";\n  }\n  button {  font-family: 'radnika_next'; }\n"]);
+  var data = _taggedTemplateLiteral(["\n  @font-face {\n    font-family: 'radnika_next';\n    src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');\n    font-weight: normal;\n    font-style: normal;\n  }\n  html {\n    box-sizing: border-box;\n    font-size: 10px;\n  }\n  *, *:before, *:after {\n    box-sizing: inherit;\n  }\n  body {\n    padding: 0;\n    margin: 0;\n    font-size: 1.5rem;\n    line-height: 2;\n    font-family: 'radnika_next';\n  }\n  a {\n    text-decoration: none;\n    color: ", ";\n  }\n  button {  font-family: 'radnika_next'; }\n  #nprogress {\n    .bar {\n      height:20px;\n      background: ", ";\n    }\n    .spinner-icon {\n      border-top-color: #3f51b5;\n     border-left-color: #3f51b5;\n    }\n    .peg {\n      box-shadow: 0 0 10px #3f51b5, 0 0 5px #3f51b5;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -961,8 +968,39 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+ // Material UI
 
-var theme = {
+
+
+
+ // const theme = createMuiTheme({ typography: { useNextVariants: true } })
+
+var theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__["createMuiTheme"])(_theme__WEBPACK_IMPORTED_MODULE_7__["default"]);
+var StyledButton = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.button.withConfig({
+  displayName: "Page__StyledButton",
+  componentId: "sc-4u7a64-0"
+})(["padding:8px 12px;border:1px solid;cursor:pointer;outline:none;border-radius:", "px;color:", ";background-color:", ";border-color:", ";transition:", ";font-family:", ";&:hover{background-color:", ";border-color:", ";}&:active{background-color:", ";border-color:", ";}&:focus{box-shadow:0 0 0 0.2rem ", ";}font-size:18px;", "{font-size:16px;}"], function (props) {
+  return props.theme.shape.borderRadius;
+}, function (props) {
+  return props.theme.palette.primary.contrastText;
+}, function (props) {
+  return props.theme.palette.primary.main;
+}, function (props) {
+  return props.theme.palette.primary.main;
+}, function (props) {
+  return props.theme.transitions.create(["background-color", "box-shadow"]);
+}, ["-apple-system", "BlinkMacSystemFont", '"Segoe UI"', "Roboto", '"Helvetica Neue"', "Arial", "sans-serif", '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"'].join(","), function (props) {
+  return Object(_material_ui_core_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_6__["darken"])(props.theme.palette.primary.main, 0.1);
+}, function (props) {
+  return Object(_material_ui_core_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_6__["darken"])(props.theme.palette.primary.main, 0.2);
+}, function (props) {
+  return Object(_material_ui_core_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_6__["darken"])(props.theme.palette.primary.main, 0.2);
+}, function (props) {
+  return Object(_material_ui_core_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_6__["darken"])(props.theme.palette.primary.main, 0.3);
+}, function (props) {
+  return Object(_material_ui_core_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_6__["fade"])(props.theme.palette.primary.main, 0.5);
+}, theme.breakpoints.up("md"));
+var customTheme = {
   red: "#FF0000",
   black: "#393939",
   grey: "#3A3A3A",
@@ -985,23 +1023,26 @@ var theme = {
       contrastText: "#FFF"
     },
     secondary: {
-      main: "#3f51b5"
+      // main: "#3f51b5",
+      main: "yellow"
     }
   }
 };
 var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Page__StyledPage",
-  componentId: "sc-4u7a64-0"
+  componentId: "sc-4u7a64-1"
 })(["background:white;color:", ";"], function (props) {
   return props.theme.black;
 });
 var Inner = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Page__Inner",
-  componentId: "sc-4u7a64-1"
+  componentId: "sc-4u7a64-2"
 })(["max-width:", ";margin:0 auto;padding:2rem;"], function (props) {
   return props.theme.maxWidth;
 });
-Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["injectGlobal"])(_templateObject(), theme.black);
+Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["injectGlobal"])(_templateObject(), theme.black, function (props) {
+  return props.theme.palette.secondary.main;
+});
 
 var Page =
 /*#__PURE__*/
@@ -1017,38 +1058,44 @@ function (_Component) {
   _createClass(Page, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_1__["ThemeProvider"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_NoSsr__WEBPACK_IMPORTED_MODULE_4___default.a, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 140
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_1__["ThemeProvider"], {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 141
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 142
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Meta__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 143
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 144
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Inner, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 145
         },
         __self: this
-      }, this.props.children)));
+      }, this.props.children))));
     }
   }]);
 
@@ -2250,6 +2297,331 @@ function (_App) {
 
 /***/ }),
 
+/***/ "./theme.js":
+/*!******************!*\
+  !*** ./theme.js ***!
+  \******************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var theme = {
+  direction: "ltr",
+  palette: {
+    common: {
+      black: "#000",
+      white: "#fff"
+    },
+    type: "light",
+    primary: {
+      light: "#ff5c8d",
+      main: "#d81b60",
+      dark: "#a00037",
+      contrastText: "#ffffff" // light: "#757de8",
+      // main: "#3f51b5",
+      // dark: "#002984",
+      // contrastText: "#ffffff",
+
+    },
+    secondary: _defineProperty({
+      light: "#c5cae9",
+      main: "#c5cae9",
+      dark: "#9499b7",
+      contrastText: "#000000"
+    }, "contrastText", "#ffffff"),
+    // primary: {
+    //   light: "#757de8",
+    //   main: "#3f51b5",
+    //   dark: "#002984",
+    //   contrastText: "#ffffff",
+    // },
+    // secondary: {
+    //   light: "#ff5c8d",
+    //   main: "#d81b60",
+    //   dark: "#a00037",
+    //   contrastText: "#ffffff",
+    // },
+    // c5cae9
+    error: {
+      light: "#e57373",
+      main: "#f44336",
+      dark: "#d32f2f",
+      contrastText: "#fff"
+    },
+    grey: {
+      50: "#fafafa",
+      100: "#f5f5f5",
+      200: "#eeeeee",
+      300: "#e0e0e0",
+      400: "#bdbdbd",
+      500: "#9e9e9e",
+      600: "#757575",
+      700: "#616161",
+      800: "#424242",
+      900: "#212121",
+      A100: "#d5d5d5",
+      A200: "#aaaaaa",
+      A400: "#303030",
+      A700: "#616161"
+    },
+    shades: {
+      dark: {
+        text: {
+          primary: "rgba(255, 255, 255, 1)",
+          secondary: "rgba(255, 255, 255, 0.7)",
+          disabled: "rgba(255, 255, 255, 0.5)",
+          hint: "rgba(255, 255, 255, 0.5)",
+          icon: "rgba(255, 255, 255, 0.5)",
+          divider: "rgba(255, 255, 255, 0.12)",
+          lightDivider: "rgba(255, 255, 255, 0.075)"
+        },
+        input: {
+          bottomLine: "rgba(255, 255, 255, 0.7)",
+          helperText: "rgba(255, 255, 255, 0.7)",
+          labelText: "rgba(255, 255, 255, 0.7)",
+          inputText: "rgba(255, 255, 255, 1)",
+          disabled: "rgba(255, 255, 255, 0.5)"
+        },
+        action: {
+          active: "rgba(255, 255, 255, 1)",
+          disabled: "rgba(255, 255, 255, 0.3)"
+        },
+        background: {
+          default: "#303030",
+          paper: "#424242",
+          appBar: "#212121",
+          contentFrame: "#212121"
+        },
+        line: {
+          stepper: "#bdbdbd"
+        }
+      },
+      light: {
+        text: {
+          primary: "rgba(0, 0, 0, 0.87)",
+          secondary: "rgba(0, 0, 0, 0.54)",
+          disabled: "rgba(0, 0, 0, 0.38)",
+          hint: "rgba(0, 0, 0, 0.38)",
+          icon: "rgba(0, 0, 0, 0.38)",
+          divider: "rgba(0, 0, 0, 0.12)",
+          lightDivider: "rgba(0, 0, 0, 0.075)"
+        },
+        input: {
+          bottomLine: "rgba(0, 0, 0, 0.42)",
+          helperText: "rgba(0, 0, 0, 0.54)",
+          labelText: "rgba(0, 0, 0, 0.54)",
+          inputText: "rgba(0, 0, 0, 0.87)",
+          disabled: "rgba(0, 0, 0, 0.42)"
+        },
+        action: {
+          active: "rgba(0, 0, 0, 0.54)",
+          disabled: "rgba(0, 0, 0, 0.26)"
+        },
+        background: {
+          default: "#fafafa",
+          paper: "#fff",
+          appBar: "#f5f5f5",
+          contentFrame: "#eeeeee"
+        },
+        line: {
+          stepper: "#bdbdbd"
+        }
+      }
+    },
+    text: {
+      primary: "rgba(0, 0, 0, 0.87)",
+      secondary: "rgba(0, 0, 0, 0.54)",
+      // primary: "rgba(255, 255, 255, 1)",
+      // secondary: "rgba(255, 255, 255, 1)",
+      disabled: "rgba(0, 0, 0, 0.38)",
+      hint: "rgba(0, 0, 0, 0.38)",
+      icon: "rgba(0, 0, 0, 0.38)",
+      divider: "rgba(0, 0, 0, 0.12)",
+      lightDivider: "rgba(0, 0, 0, 0.075)"
+    },
+    input: {
+      bottomLine: "rgba(0, 0, 0, 0.42)",
+      helperText: "rgba(0, 0, 0, 0.54)",
+      labelText: "rgba(0, 0, 0, 0.54)",
+      inputText: "rgba(0, 0, 0, 0.87)",
+      disabled: "rgba(0, 0, 0, 0.42)"
+    },
+    action: {
+      active: "rgba(0, 0, 0, 0.54)",
+      disabled: "rgba(0, 0, 0, 0.26)"
+    },
+    background: {
+      default: "#fafafa",
+      paper: "#fff",
+      appBar: "#f5f5f5",
+      contentFrame: "#eeeeee"
+    },
+    line: {
+      stepper: "#bdbdbd"
+    }
+  },
+  typography: {
+    useNextVariants: true,
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontSize: 14,
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
+    sectionIntro: {
+      fontSize: "2rem",
+      fontWeight: 100,
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      letterSpacing: "-.04em",
+      lineHeight: "1.14286em",
+      marginLeft: "-.06em",
+      color: "rgba(0, 0, 0, 0.54)"
+    },
+    display4: {
+      fontSize: "7rem",
+      fontWeight: 300,
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      letterSpacing: "-.04em",
+      lineHeight: "1.14286em",
+      marginLeft: "-.06em",
+      color: "rgba(0, 0, 0, 0.54)"
+    },
+    display3: {
+      fontSize: "3.5rem",
+      fontWeight: 400,
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      letterSpacing: "-.02em",
+      lineHeight: "1.30357em",
+      marginLeft: "-.04em",
+      color: "rgba(0, 0, 0, 0.54)"
+    },
+    display2: {
+      fontSize: "2.8125rem",
+      fontWeight: 400,
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      lineHeight: "1.06667em",
+      marginLeft: "-.04em",
+      color: "rgba(0, 0, 0, 0.54)"
+    },
+    display1: {
+      fontSize: "2.125rem",
+      fontWeight: 400,
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      lineHeight: "1.20588em",
+      marginLeft: "-.04em",
+      color: "rgba(0, 0, 0, 0.54)"
+    },
+    headline: {
+      fontSize: "1.5rem",
+      fontWeight: 400,
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      lineHeight: "1.35417em",
+      color: "rgba(0, 0, 0, 0.87)"
+    },
+    title: {
+      fontSize: "1.3125rem",
+      fontWeight: 500,
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      lineHeight: "1.16667em",
+      color: "rgba(0, 0, 0, 0.87)"
+    },
+    subheading: {
+      fontSize: "1rem",
+      fontWeight: 400,
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      lineHeight: "1.5em",
+      color: "rgba(0, 0, 0, 0.87)"
+    },
+    body2: {
+      fontSize: "0.875rem",
+      fontWeight: 500,
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      lineHeight: "1.71429em",
+      color: "rgba(0, 0, 0, 0.87)"
+    },
+    body1: {
+      fontSize: "1rem",
+      fontWeight: 100,
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      lineHeight: "1.46429em",
+      color: "rgba(0, 0, 0, 0.87)"
+    },
+    caption: {
+      fontSize: "0.75rem",
+      fontWeight: 400,
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      lineHeight: "1.375em",
+      color: "rgba(0, 0, 0, 0.54)"
+    },
+    button: {
+      fontSize: "0.875rem",
+      textTransform: "uppercase",
+      fontWeight: 500,
+      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
+    }
+  },
+  mixins: {
+    toolbar: {
+      minHeight: 56,
+      "@media (min-width:0px) and (orientation: landscape)": {
+        minHeight: 48
+      },
+      "@media (min-width:600px)": {
+        minHeight: 64
+      }
+    }
+  },
+  breakpoints: {
+    keys: ["xs", "sm", "md", "lg", "xl"],
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920
+    }
+  },
+  shadows: ["none", "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)", "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)", "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)", "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)", "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)", "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)", "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)", "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)", "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)", "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)", "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)", "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)", "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)", "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)", "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)", "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)", "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)", "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)", "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)", "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)", "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)", "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)", "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)", "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)"],
+  transitions: {
+    easing: {
+      easeInOut: "cubic-bezier(0.4, 0, 0.2, 1)",
+      easeOut: "cubic-bezier(0.0, 0, 0.2, 1)",
+      easeIn: "cubic-bezier(0.4, 0, 1, 1)",
+      sharp: "cubic-bezier(0.4, 0, 0.6, 1)"
+    },
+    duration: {
+      shortest: 150,
+      shorter: 200,
+      short: 250,
+      standard: 300,
+      complex: 375,
+      enteringScreen: 225,
+      leavingScreen: 195
+    }
+  },
+  spacing: {
+    unit: 8
+  },
+  zIndex: {
+    mobileStepper: 900,
+    menu: 1000,
+    appBar: 1100,
+    drawerOverlay: 1200,
+    navDrawer: 1300,
+    dialogOverlay: 1400,
+    dialog: 1500,
+    layer: 2000,
+    popover: 2100,
+    snackbar: 2900,
+    tooltip: 3000
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (theme);
+
+/***/ }),
+
 /***/ 0:
 /*!*****************************!*\
   !*** multi ./pages/_app.js ***!
@@ -2270,6 +2642,39 @@ module.exports = __webpack_require__(/*! ./pages/_app.js */"./pages/_app.js");
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/regenerator");
+
+/***/ }),
+
+/***/ "@material-ui/core/NoSsr":
+/*!******************************************!*\
+  !*** external "@material-ui/core/NoSsr" ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/NoSsr");
+
+/***/ }),
+
+/***/ "@material-ui/core/styles":
+/*!*******************************************!*\
+  !*** external "@material-ui/core/styles" ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/styles");
+
+/***/ }),
+
+/***/ "@material-ui/core/styles/colorManipulator":
+/*!************************************************************!*\
+  !*** external "@material-ui/core/styles/colorManipulator" ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/styles/colorManipulator");
 
 /***/ }),
 

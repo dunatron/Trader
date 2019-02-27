@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
-import Error from './ErrorMessage';
-import styled from 'styled-components';
-import Head from 'next/head';
+import React, { Component } from "react"
+import gql from "graphql-tag"
+import { Query } from "react-apollo"
+import Error from "./ErrorMessage"
+import styled from "styled-components"
+import Head from "next/head"
+import AddToCart from "./AddToCart"
 
 const SingleItemStyles = styled.div`
   max-width: 1200px;
@@ -22,7 +23,7 @@ const SingleItemStyles = styled.div`
     margin: 3rem;
     font-size: 2rem;
   }
-`;
+`
 
 const SINGLE_ITEM_QUERY = gql`
   query SINGLE_ITEM_QUERY($id: ID!) {
@@ -33,7 +34,7 @@ const SINGLE_ITEM_QUERY = gql`
       largeImage
     }
   }
-`;
+`
 class SingleItem extends Component {
   render() {
     return (
@@ -41,13 +42,12 @@ class SingleItem extends Component {
         query={SINGLE_ITEM_QUERY}
         variables={{
           id: this.props.id,
-        }}
-      >
+        }}>
         {({ error, loading, data }) => {
-          if (error) return <Error error={error} />;
-          if (loading) return <p>Loading...</p>;
-          if (!data.item) return <p>No Item Found for {this.props.id}</p>;
-          const item = data.item;
+          if (error) return <Error error={error} />
+          if (loading) return <p>Loading...</p>
+          if (!data.item) return <p>No Item Found for {this.props.id}</p>
+          const item = data.item
           return (
             <SingleItemStyles>
               <Head>
@@ -58,13 +58,16 @@ class SingleItem extends Component {
                 <h2>Viewing {item.title}</h2>
                 <p>{item.description}</p>
               </div>
+              <div className="buttonList">
+                <AddToCart id={item.id} />
+              </div>
             </SingleItemStyles>
-          );
+          )
         }}
       </Query>
-    );
+    )
   }
 }
 
-export default SingleItem;
-export { SINGLE_ITEM_QUERY };
+export default SingleItem
+export { SINGLE_ITEM_QUERY }
